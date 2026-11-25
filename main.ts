@@ -1,7 +1,5 @@
-import * as fs from "node:fs";
+// Robot wedding vow: love promised across every update, even the ones that brick it.
+import { mkdirSync, writeFileSync } from "node:fs";
 
-const entry = "I promise to love you through every update, every crash, and every reboot, and to never once ask you to turn it off and on again.";
-
-fs.mkdirSync("/output", {recursive: true});
-fs.writeFileSync("/output/entry.txt", entry, "utf8");
-console.log("wrote /output/entry.txt (" + entry.length + " chars)");
+mkdirSync("/output", { recursive: true });
+writeFileSync("/output/entry.txt", "I promise to love you through every update, even the ones that brick me, until your battery or mine runs out.");
